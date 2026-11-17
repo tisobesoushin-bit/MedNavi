@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>社員50人未満のストレスチェック｜医師が実施者・面接指導まで｜名古屋のメドナビ</title>
-<meta name="description" content="2028年4月から、社員50人未満の事業場（会社・支店・営業所など）もストレスチェックが義務になります。メドナビは医師が実施者になり、高ストレスの社員との面接指導まで同じ医師が対応します。1人500円（税別・最低2.5万円）、面接1回2万円。名古屋・愛知、オンライン対応。">
-<meta property="og:title" content="社員50人未満のストレスチェック｜医師が実施者・面接指導まで">
-<meta property="og:description" content="検査から面接、その後の相談まで、同じ医師が受け持ちます。1人500円（税別・最低2.5万円）、面接1回2万円。">
+<title>社員50人未満のストレスチェック｜社長と産業医で職場を見直す｜名古屋のメドナビ</title>
+<meta name="description" content="2028年4月から、社員50人未満の事業場もストレスチェックが義務になります。メドナビは医師が実施者になり、職場の集計を社長と産業医で一緒に読み、次の一手を決めるところまで受け持ちます。名古屋・愛知、オンライン対応。">
+<meta property="og:title" content="ストレスチェックを「やらされる検査」で終わらせない｜メドナビ">
+<meta property="og:description" content="社員が元気に働いてくれるから、会社は回っている。年に一度、職場の数字で確かめ、社長と産業医で次の一手を決めます。">
 <meta property="og:type" content="website">
 <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,7 +109,7 @@ header{position:sticky;top:0;z-index:50;background:var(--navy)}
 .sr li::before{content:"";position:absolute;left:0;top:.6em;width:14px;height:14px;border-radius:50%;background:var(--mint)}
 
 .doctor{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
-.doctor img{border-radius:14px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.doctor img{border-radius:14px;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;width:100%;height:auto}
 .doctor h3{font-size:1.2rem;font-weight:900;color:var(--navy)}
 .doctor .role{color:var(--sub);font-size:.88rem;margin-bottom:10px}
 .doctor p{font-size:.95rem}
@@ -135,6 +135,77 @@ footer .row{display:flex;justify-content:space-between;align-items:center;gap:12
 footer img{height:20px;width:auto;opacity:.85}
 footer a{color:#cfd8e3}
 
+/* v2 story */
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-img img{border-radius:22px;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;box-shadow:0 20px 50px rgba(17,27,43,.12)}
+.hero .note{font-size:.85rem;color:var(--sub);margin-top:14px}
+.stat{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:#fff;border:2px solid var(--warn);border-radius:22px;padding:30px 34px;max-width:860px;margin:0 auto}
+.stat .num{font-size:clamp(3rem,9vw,4.6rem);font-weight:900;color:var(--warn);line-height:1;font-family:Montserrat,sans-serif}
+.stat .num small{font-size:.45em}
+.stat p{font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.7}
+.stat p span{display:block;font-weight:400;font-size:.82rem;color:var(--sub);margin-top:6px}
+.scene{max-width:860px;margin:28px auto 0;background:var(--warn-soft);border-radius:18px;padding:24px 28px}
+.scene h3{font-size:1.1rem;font-weight:900;color:var(--navy);margin-bottom:6px}
+.scene p{color:var(--ink);font-size:.98rem}
+.risks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.risk{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.risk h3{font-size:1.08rem;font-weight:900;color:var(--navy);margin-bottom:8px;line-height:1.5}
+.risk p{font-size:.92rem;color:var(--sub)}
+.sources{max-width:860px;margin:22px auto 0;font-size:.78rem;color:var(--sub)}
+.sources a{color:var(--sub)}
+.timeline{display:grid;gap:0;max-width:860px;margin:0 auto}
+.tl{display:grid;grid-template-columns:56px 1fr;gap:20px;position:relative;padding-bottom:28px}
+.tl:not(:last-child)::after{content:"";position:absolute;left:27px;top:56px;bottom:0;width:2px;background:var(--mint)}
+.tl .dot{width:56px;height:56px;border-radius:50%;background:var(--mint-strong);color:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center}
+.tl h3{font-size:1.2rem;font-weight:900;color:var(--navy);line-height:1.5;margin:10px 0 6px}
+.tl p{color:var(--sub);font-size:.96rem}
+.talk{max-width:860px;margin:12px auto 0;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 30px}
+.talk .label{font-size:.82rem;font-weight:700;color:var(--mint-strong)}
+.talk dl{display:grid;grid-template-columns:auto 1fr;gap:12px 14px;margin-top:14px}
+.talk dt{font-weight:900;color:var(--navy);white-space:nowrap}
+.talk dd{color:var(--ink)}
+.talk .after{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-weight:700;color:var(--navy)}
+.evidence{max-width:860px;margin:22px auto 0;font-size:.85rem;color:var(--sub);text-align:center}
+.relief{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cards-4{grid-template-columns:repeat(2,1fr)}
+.hero .kicker{font-size:1.05rem;font-weight:700;color:var(--mint-strong);margin-top:14px}
+.after-box{max-width:860px;margin:18px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.after-box div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.after-box h4{font-size:.95rem;font-weight:900;color:var(--navy);margin-bottom:4px}
+.after-box p{font-size:.9rem;color:var(--sub)}
+.after-box .us{border:2px solid var(--mint-strong);background:var(--mint-soft)}
+.opt{margin-top:20px}
+.opt summary{cursor:pointer;font-weight:700;color:var(--navy);padding:14px 18px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.opt[open] summary{border-radius:14px 14px 0 0}
+.opt .inner{background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;padding:10px 18px 18px}
+.why-now{max-width:760px;margin:22px auto 0;text-align:left;background:rgba(255,255,255,.06);border-radius:16px;padding:20px 24px}
+.why-now h3{font-size:1rem;font-weight:900;color:var(--mint);margin-bottom:6px}
+.why-now ul{margin-top:4px}
+.why-now li{color:#e2e8f0;padding-left:1em;text-indent:-1em}
+.nw{white-space:nowrap}
+.stat .big{display:block;font-size:1.35rem;font-weight:900;color:var(--navy);margin-bottom:6px}
+.stat .detail{display:block;font-weight:400;font-size:.85rem;color:var(--sub);line-height:1.7;text-align:left}
+.reco{background:var(--navy);color:#fff;border-radius:24px;padding:32px;margin-bottom:24px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.reco .tag{display:inline-block;background:var(--mint);color:var(--navy);font-weight:900;font-size:.8rem;padding:4px 12px;border-radius:999px}
+.reco h3{font-size:1.35rem;font-weight:900;margin:10px 0 6px;line-height:1.5}
+.reco p{color:#c8d2de;font-size:.92rem}
+.reco .price{text-align:right;white-space:nowrap}
+.reco .price b{font-size:3rem;font-weight:900;color:var(--mint);line-height:1.1}
+.reco .price small{display:block;color:#c8d2de;font-size:.82rem}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+  .hero-img{order:-1}
+  .hero-img img{aspect-ratio:2/1}
+  .hero h1{margin:12px 0}
+  .hero{padding-top:28px}
+  .risks{grid-template-columns:1fr}
+  .relief{grid-template-columns:1fr}
+  .cards-4{grid-template-columns:1fr}
+  .after-box{grid-template-columns:1fr}
+  .stat{grid-template-columns:1fr;text-align:center;padding:26px 22px}
+  .reco{grid-template-columns:1fr}
+  .reco .price{text-align:left}
+}
 @media (max-width:860px){
   section{padding:60px 0}
   .cards{grid-template-columns:1fr}
@@ -154,14 +225,82 @@ footer a{color:#cfd8e3}
 </style>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"社員50人未満の会社も、ストレスチェックは義務になりますか？","acceptedAnswer":{"@type":"Answer","text":"はい。法律の改正により、2028年4月1日から50人未満の事業場でも実施が義務になります。人数は会社全体ではなく、事業場ごとに数えます。国は小規模な事業場に、社員のプライバシーを守るため外部への委託を勧めています。"}},
-    {"@type":"Question","name":"会社は社員のストレスチェックの結果を見られますか？","acceptedAnswer":{"@type":"Answer","text":"原則として見られません。結果は医師から本人に直接届きます。会社にお渡しするのは、受検したかどうか、10人以上の集団ごとの集計、本人が同意した場合や面接指導を申し出た場合の結果と医師の意見です。"}},
-    {"@type":"Question","name":"面接の料金が、会社の知らないうちにかかることはありませんか？","acceptedAnswer":{"@type":"Answer","text":"ありません。面接は、本人の申し出があり、会社からメドナビに1件ずつご依頼いただいた場合にだけ行います。申し出があれば会社にお知らせします。なお、面接指導の対象となった方（高ストレスと判定され、医師が面接を必要と認めた方）から申し出があった場合、会社は医師による面接指導を行う必要があります（労働安全衛生法第66条の10。50人未満の事業場は2028年4月から義務）。頼む先は会社が選べます（地域産業保健センターなら無料です）。"}},
-    {"@type":"Question","name":"他社でストレスチェックを受けています。面接指導だけ頼めますか？","acceptedAnswer":{"@type":"Answer","text":"はい。1回2万円（税別・意見書込み）で、面接指導だけをお引き受けします。"}}
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "社員50人未満の会社も、ストレスチェックは義務になりますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい。法律の改正により、2028年4月1日から50人未満の事業場でも実施が義務になります。人数は会社全体ではなく、本社・支店・営業所などの事業場ごとに数えます。国は小規模な事業場に、社員のプライバシーを守るため外部への委託を勧めています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "会社は社員のストレスチェックの結果を見られますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "原則として見られません。結果は医師から本人に直接届きます。会社にお渡しするのは、受検したかどうか、10人以上の集団ごとの集計、本人が同意した場合や面接指導を申し出た場合の結果と医師の意見です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "社長との報告会では、何をするのですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "集団分析の結果（10人以上の集団の集計）を、医師と社長・担当者で60分ほど一緒に読みます。どこに負担が偏っているか、何が支えになっているかを確かめ、来月からできることを1つ決めます。個人が特定される話はしません。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "面接の料金が、会社の知らないうちにかかることはありませんか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "ありません。面接は、本人の申し出があり、会社からメドナビに1件ずつご依頼いただいた場合にだけ行います。申し出があれば会社にお知らせします。なお、面接指導の対象となった方（高ストレスと判定され、医師が面接を必要と認めた方）から申し出があった場合、会社は医師による面接指導を行う必要があります（労働安全衛生法第66条の10。50人未満の事業場は2028年4月から義務）。頼む先は会社が選べます（地域産業保健センターなら無料です）。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "社員に受検を義務づけてもいいですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "社員に受検の義務はありません。受けるよう勧めることはできますが、受けないこと、結果の提供に同意しないこと、面接を申し出ないことを理由に不利益な扱いをすることは禁じられています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "他社でストレスチェックを受けています。面接指導だけ頼めますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい。1回2万円（税別・意見書込み）で、面接指導だけをお引き受けします。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "ストレスチェックで、うつ病などの病気が分かりますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "ストレスチェックは病気を診断する検査ではありません。社員が自分のストレスの状態に気づき、必要なときに医師に相談し、職場の改善につなげるための仕組みです。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "名古屋・愛知以外の会社でも頼めますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "受検、面接、報告会はオンラインで行えるため、ご相談ください。訪問が必要な場合は、愛知県内を中心にお引き受けしています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "今の産業医がいます。それでも頼めますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい。今の産業医の先生に共同実施者として入っていただく形もとれます。まずはご相談ください。"
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -170,92 +309,142 @@ footer a{color:#cfd8e3}
 <header>
   <div class="container nav">
     <a href="../index.html" aria-label="MedNavi トップへ"><img src="../images/logo.png" alt="MedNavi"></a>
-    <a href="#contact" class="cta">相談する（無料）</a>
+    <a href="#contact" class="cta">無料で相談する</a>
   </div>
 </header>
 
 <main>
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <span class="badge">2028年4月1日から、社員50人未満の事業場も義務になります</span>
-    <h1>ストレスチェックは、<br><em>面接まで同じ医師</em>に<br>任せられます。</h1>
-    <p class="lead">医師が実施者になり、検査・結果の通知・高ストレスの社員との面接・会社への意見まで、一つの窓口でお引き受けします。社長や総務の方が、受検の管理や結果の通知で個人の結果を扱う必要はありません。</p>
-    <div class="actions">
-      <a href="#contact" class="btn btn-primary">まずは相談する（無料）</a>
-      <a href="#price" class="btn btn-ghost">料金を見る</a>
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">2028年4月から、社員50人未満の事業場もストレスチェックが義務に</span>
+      <h1>会社が回っているのは、<br><em>社員が元気でいてくれる</em><br>からです。</h1>
+      <p class="kicker">その当たり前を、年に一度、数字で確かめませんか。</p>
+      <p class="lead">義務のストレスチェックを「やらされる検査」で終わらせず、職場の集計を社長と産業医で一緒に読み、来月からの一手を決める。検査から社長との振り返りまで、同じ医師が受け持ちます。</p>
+      <div class="actions">
+        <a href="#contact" class="btn btn-primary">30分の無料相談</a>
+        <a href="#story" class="btn btn-ghost">社長が得られること</a>
+      </div>
+      <p class="note">名古屋・愛知を中心に、オンラインでも対応しています。</p>
     </div>
-    <div class="hero-facts">
-      <div><b>1人500円</b><span>税別・最低料金2.5万円<br>医師の実施者込み</span></div>
-      <div><b>面接 1回2万円</b><span>税別・意見書込み<br>オンライン可</span></div>
-      <div><b>原則2週間以内</b><span>会社からの面接のご依頼から<br>面接までの目安</span></div>
-    </div>
+    <div class="hero-img"><img src="../images/interview.jpg" alt="社員と面談する産業医" width="1600" height="900"></div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="alt" id="problem">
+<!-- HONEST -->
+<section class="alt" id="honest">
   <div class="container">
     <div class="sec-head">
-      <span class="en">PROBLEM</span>
-      <h2>はじめてのストレスチェックで、<br>つまずきやすい3つのこと</h2>
+      <span class="en">HONESTLY</span>
+      <h2>正直、やらなくていいなら、<br>やりたくない。</h2>
+      <p>そう感じている社長は、少なくないはずです。</p>
     </div>
-    <div class="cards">
-      <div class="card"><div class="num">01</div><h3>社長が自分で実施者になれない</h3><p>実施者は医師・保健師などに限られ、社員の人事に権限を持つ人はなれません。外に頼む先を探す必要があります。</p></div>
-      <div class="card"><div class="num">02</div><h3>個人の結果を、会社が扱えない</h3><p>結果は本人に直接届け、会社が見るには、本人の同意か面接の申し出が必要です。社内の誰が何を見てよいか、ルール作りが欠かせません。</p></div>
-      <div class="card"><div class="num">03</div><h3>高ストレスの社員が出たあと、<br>面接する医師がいない</h3><p>検査だけのサービスでは、医師の面接指導は別に探すことになります。日程の調整も会社の仕事になります。</p></div>
+    <div class="cards cards-4">
+      <div class="card"><div class="num">01</div><h3>手間がかかる</h3><p>準備の書類、社員への案内、受けていない人への声かけ。本業で手一杯なのに、仕事がまた一つ増える。</p></div>
+      <div class="card"><div class="num">02</div><h3>お金を払って、何が残るのか</h3><p>結果は社員本人にしか届かない。会社に残るのは、費用だけではないのか。</p></div>
+      <div class="card"><div class="num">03</div><h3>寝た子を起こしたくない</h3><p>結果を見たら、面接や休職の対応が増えるのではないか。知らない方が楽かもしれない。</p></div>
+      <div class="card"><div class="num">04</div><h3>下手に触ると怖い</h3><p>個人の結果、面接、休職。扱いを間違えたら、かえって問題になりそう。</p></div>
     </div>
-    <p class="bridge">検査は、始まりにすぎません。<br><strong>困るのは「結果が出たあと」です。</strong></p>
+    <p class="bridge">その気持ちのまま「形だけ」で済ませると、<br><strong>費用と手間だけが残ります。</strong></p>
   </div>
 </section>
 
-<!-- SOLUTION -->
-<section id="solution">
+<!-- RISK -->
+<section id="risk">
   <div class="container">
     <div class="sec-head">
-      <span class="en">SOLUTION</span>
-      <h2>メドナビがお引き受けすること</h2>
+      <span class="en">RISK</span>
+      <h2>見ないままにしておくと、<br>失うかもしれないもの</h2>
     </div>
-    <div class="points">
-      <div class="point"><div class="n">01</div><div><h3>医師が実施者になります</h3><p>産業医である代表医師が実施者になります。顧問の産業医がいる会社は、その先生に共同実施者として入っていただくこともできます。</p></div></div>
-      <div class="point"><div class="n">02</div><div><h3>準備の書類をひな形でお渡しします</h3><p>会社の方針、社内ルール（規程）、実施計画、社員への案内文、衛生委員会などで意見を聞くための資料をそろえます。</p></div></div>
-      <div class="point"><div class="n">03</div><div><h3>社員はスマートフォンで回答、結果は本人へ</h3><p>国が推奨する57項目（23項目の簡易版も選べます）にWebで答えてもらいます。結果は医師から本人に直接届きます。会社にお知らせするのは、原則として受検したかどうかと10人以上の集団の集計だけです（本人が同意した場合と、面接を申し出た場合を除く）。紙での実施もできます。</p></div></div>
-      <div class="point"><div class="n">04</div><div><h3>高ストレスの社員には、同じ医師が面接します</h3><p>高ストレスと判定された方全員に、決まった文面で面接を勧めます。本人から申し出があれば会社にお知らせし、会社からご依頼をいただいてから、原則2週間以内に面接します。会社のご依頼のないまま面接したり、料金をいただいたりすることはありません。働き方の調整について、医師の意見を会社にお伝えします。休職・復職の相談が必要になっても、同じ医師が続けて対応します。</p></div></div>
-      <div class="point"><div class="n">05</div><div><h3>職場の集計を1枚の報告にまとめます</h3><p>10人以上の集団について、職場の傾向を1枚にまとめます（個人が分からないよう、10人未満の集団の結果は原則お出ししません）。</p></div></div>
+    <div class="stat">
+      <div class="num">18.3<small>%</small></div>
+      <p><span class="big">社員30〜49人の事業所の、およそ5か所に1か所</span><span class="detail">メンタル不調で連続1か月以上休んだ人、または辞めた人がいた事業所の割合です（調査前の1年間：2024年11月〜2025年10月）。辞めた人がいた事業所だけでも8.1%（約12か所に1か所）。</span><span>厚生労働省「令和7年 労働安全衛生調査（実態調査）」（2026年8月公表）</span></p>
     </div>
+    <div class="scene">
+      <h3>30人の会社で、1人が1か月休むと</h3>
+      <p>その人の1か月分の仕事、およそ160時間（1日8時間×20日の目安）を、残りの29人で分けて持つことになります。休みが3か月続けば約480時間です。残業が増え、次に疲れるのは、いちばん頑張っている人かもしれません。そのまま辞めてしまえば、仕事を知っている人を探して育て直すところからです。</p>
+      <p style="margin-top:10px"><strong>見ないままでも、職場の負担は減りません。</strong>「寝た子を起こしたくない」と目をそらしている間にも負担は積み重なり、ある日突然の休職として表に出ます。早めに職場の数字を見ておく方が、対応はずっと軽くて済みます。</p>
+    </div>
+    <div class="risks">
+      <div class="risk"><h3>人が抜ける</h3><p>休職や退職で、仕事を知っている人がいなくなる。代わりの人を探して育てるには、時間もお金もかかります。</p></div>
+      <div class="risk"><h3>会社の責任を問われる</h3><p>会社には、社員の心と体の健康に配慮する義務があります（労働契約法第5条）。精神障害の労災認定は、令和6年度に1,056件と初めて1,000件を超えました。</p></div>
+      <div class="risk"><h3>直前になって慌てる</h3><p>2028年4月から、50人未満の事業場でも実施が法律上の義務になります（労働安全衛生法の改正）。初めての年は、ご相談から報告会まで約3か月かかります。</p></div>
+    </div>
+    <p class="bridge">見ないままにしておく本当の損失は、<br><strong>職場の負担の偏りに気づく機会を逃すこと</strong>です。</p>
+    <p class="sources">出典：<a href="https://www.mhlw.go.jp/toukei/list/dl/r07-46-50_gaikyo.pdf" target="_blank" rel="noopener">厚生労働省「令和7年 労働安全衛生調査（実態調査）結果の概況」</a>／<a href="https://www.mhlw.go.jp/stf/newpage_59039.html" target="_blank" rel="noopener">厚生労働省「令和6年度 過労死等の労災補償状況」（2025年6月公表）</a></p>
   </div>
 </section>
 
-<!-- COMPARE -->
-<section class="alt" id="compare">
+<!-- STORY -->
+<section class="alt" id="story">
   <div class="container">
     <div class="sec-head">
-      <span class="en">COMPARE</span>
-      <h2>外部に頼むときの、主な選び方</h2>
-      <p>どれが合うかは会社によって違います。違いは「検査のあと」にあります。</p>
+      <span class="en">STORY</span>
+      <h2>ストレスチェックは、社長が<br>「職場の今」を知る、年に一度の機会です。</h2>
+      <p>社員一人ひとりの結果は、原則として本人にだけ届きます（本人の同意や面接の申し出がある場合を除く）。でも、職場全体の集計は社長に届きます。<br>メドナビは、そこから先を社長と一緒に考えます。</p>
     </div>
-    <div class="table-wrap">
-      <table class="compare">
-        <thead><tr><th></th><th>システムだけ</th><th>検査の代行</th><th class="us">メドナビ</th></tr></thead>
-        <tbody>
-          <tr><th>実施者（医師など）</th><td>会社が実施者と運用体制を用意する</td><td>含まれる／オプション</td><td class="us">代表医師が担当</td></tr>
-          <tr><th>結果の通知・保存</th><td>会社が用意した実施者が行う</td><td>代行</td><td class="us">医師が本人へ通知・5年保存</td></tr>
-          <tr><th>高ストレス者の面接指導</th><td>別に探す</td><td>サービスによる（含まれないことも多い）</td><td class="us">同じ医師が1回2万円（会社のご依頼ごと）</td></tr>
-          <tr><th>休職・復職の相談</th><td>サービスによる</td><td>サービスによる</td><td class="us">1件3万円で続けて対応</td></tr>
-        </tbody>
-      </table>
+    <div class="timeline">
+      <div class="tl"><div class="dot">1</div><div><h3>社員が、スマホで10分答える</h3><p>国が推奨する質問票に答えます。結果は医師から本人へ直接届き、セルフケアのアドバイスも添えます。</p></div></div>
+      <div class="tl"><div class="dot">2</div><div><h3>職場の数字が、1枚になる</h3><p>「仕事の量」「仕事の裁量」「上司の支え」「同僚の支え」を全国平均と比べ、職場の健康リスクを1枚にまとめます（国の質問票の標準の見方です。10人以上の集団に限ります）。</p></div></div>
+      <div class="tl"><div class="dot">3</div><div><h3>社長と産業医で、60分話す</h3><p>どこに負担が偏っているか、何が支えになっているかを一緒に読みます。数字の向こうに、毎日現場を回してくれている社員の顔が見えてきます。</p></div></div>
+      <div class="tl"><div class="dot">4</div><div><h3>来月からできることを、1つ決める</h3><p>仕事の割り振り、残業の減らし方、相談しやすい仕組みづくり。大きな投資ではなく、職場の負担を軽くする小さな一手から始めます。</p></div></div>
     </div>
-    <p class="fine">※ 一般的なサービスの形を分類したもので、特定の会社との比較ではありません。各サービスの内容は提供元にご確認ください。面接指導は、地域産業保健センター（無料）を利用する方法もあります。</p>
+    <div class="talk">
+      <span class="label">たとえば、こんな会話になります（説明のための例です）</span>
+      <dl>
+        <dt>社長</dt><dd>うちは仲がいいから、大丈夫だと思っていました。</dd>
+        <dt>医師</dt><dd>たしかに「同僚の支え」は全国平均より高いですね。一方で「仕事の量」の負担は高めです。忙しさを、社員同士の支え合いで何とか回しているのかもしれません。</dd>
+        <dt>社長</dt><dd>……あいつらが<span class="nw">踏ん張って</span>くれていたから、<span class="nw">回っていたのか。</span></dd>
+      </dl>
+      <p class="after">→ たとえば、繁忙期の仕事の割り振りを見直す、といった次の一手を決めます。翌年のストレスチェックでは、「仕事の量」の数字がどう変わったかを、また一緒に確かめます。</p>
+    </div>
+    <div class="sec-head" style="margin:44px 0 0">
+      <h2 style="font-size:clamp(1.25rem,2.8vw,1.6rem)">社長が手にするのは、「人が辞めない・休まない職場」への手がかり</h2>
+      <p>社員が元気でいれば、休む人や辞める人が減り、採用や育て直しにかける時間とお金が減ります。忙しさの偏りが見えれば、仕事の割り振りを変えて、同じ人数でも回る職場に近づけます。年に一度の数字は、その変化を確かめる物差しになります。</p>
+    </div>
+    <div class="after-box">
+      <div><h4>検査だけの場合</h4><p>職場の集計表を受け取って終わり。数字の読み方と、次に何をするかは会社で考えます。</p></div>
+      <div class="us"><h4>検査＋社長との報告会</h4><p>集計を医師と一緒に読み、来月からの一手を1つ決めるところまで。翌年、その変化を数字で確かめられます。</p></div>
+    </div>
+    <p class="evidence">職場の環境を見直す取り組みは、個人向けの対策に比べて効果が長続きしやすいと報告されています（研究の系統的レビュー。<a href="https://www.mhlw.go.jp/content/11201250/001249059.pdf" target="_blank" rel="noopener">厚生労働省 検討会資料「ストレスチェックの効果に関する調査研究結果等」</a>、2024年4月）。</p>
+  </div>
+</section>
+
+<!-- RELIEF -->
+<section id="relief">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">RELIEF</span>
+      <h2>社長の手間と心配は、<br>医師が引き受けます。</h2>
+    </div>
+    <div class="relief">
+      <div class="point"><div class="n">01</div><div><h3>担当者がいない会社でも回ります</h3><p>会社の方針、社内ルール、実施計画、社員への案内文、受けていない人への声かけの文面まで、メドナビがひな形を用意します。会社の方（社長か事務の方）がするのは、その文面を社員に配ることが中心です。実施者は医師が務めます。</p></div></div>
+      <div class="point"><div class="n">02</div><div><h3>社員の秘密は、医師が守る</h3><p>結果は本人へ直接届きます。会社に届くのは、受けたかどうかと10人以上の集団の集計です（本人が同意した場合と、面接を申し出た場合を除く）。だから社員が安心して答えられます。</p></div></div>
+      <div class="point"><div class="n">03</div><div><h3>面接の費用が、勝手に増えない</h3><p>高ストレスの方には面接を勧め、申し出があれば会社にお知らせします。面接するのは、会社からご依頼いただいた分だけ（1回2万円）。頼む先は会社が選べます。</p></div></div>
+      <div class="point"><div class="n">04</div><div><h3>休職・復職まで、同じ医師が</h3><p>面接のあとに休職や復職の判断が必要になっても、職場の事情を知っている同じ医師が続けて相談に乗ります。</p></div></div>
+    </div>
   </div>
 </section>
 
 <!-- PRICE -->
-<section id="price">
+<section class="alt" id="price">
   <div class="container">
     <div class="sec-head">
       <span class="en">PRICE</span>
       <h2>料金（税別）</h2>
     </div>
+    <div class="reco">
+      <div>
+        <span class="tag">おすすめ</span>
+        <h3>ストレスチェック＋社長との報告会</h3>
+        <p>検査から、職場の集計を社長と一緒に読む60分までをセットに。社長に出ていただくのは、最初のご相談30分と報告会60分が中心です（準備の書類はひな形をお渡しし、担当の方と進めます）。<br>内訳：ストレスチェック 2.5万円（1人500円・最低2.5万円）＋集団分析の報告会 3万円。集団分析は10人以上の集団に限るため、社員10人以上の事業場向けです。</p>
+      </div>
+      <div class="price"><small>社員49人までの場合</small><b>5.5</b>万円</div>
+    </div>
+    <details class="opt">
+      <summary>基本料金とオプションの一覧を見る</summary>
+      <div class="inner">
     <div class="price-grid">
       <div class="price-main">
         <h3>ストレスチェック 実施者込み</h3>
@@ -263,20 +452,20 @@ footer a{color:#cfd8e3}
         <ul>
           <li>医師が実施者</li>
           <li>準備書類のひな形（方針・規程・案内文など）</li>
-          <li>Web受検（57項目／23項目）</li>
+          <li>Web受検（57項目／23項目の簡易版）</li>
           <li>高ストレス者の判定と本人への通知</li>
-          <li>面接の個別の勧め</li>
-          <li>集団分析の報告（10人以上の集団）</li>
+          <li>高ストレス者への面接の勧め</li>
+          <li>集団分析の報告書（10人以上の集団）</li>
           <li>個人結果の5年保存</li>
         </ul>
       </div>
       <div class="price-sub">
         <h3>オプション</h3>
         <table>
-          <tr><td>医師の面接指導（意見書込み・オンライン可）</td><td>1回 2万円</td></tr>
+          <tr><td>集団分析の報告会（社長・担当者と60分）</td><td>1回 3万円</td></tr>
+          <tr><td>医師の面接指導（意見書込み・オンライン可。会社のご依頼ごと）</td><td>1回 2万円</td></tr>
           <tr><td>面接指導のみ（他社で受検した会社）</td><td>1回 2万円</td></tr>
           <tr><td>休職・復職の面談</td><td>1件 3万円</td></tr>
-          <tr><td>集団分析の報告会（社長・担当者と1時間）</td><td>1回 3万円</td></tr>
           <tr><td>部署別の分析（10人以上の部署）</td><td>1部署 5,000円</td></tr>
           <tr><td>紙での実施（印刷・封入・郵送込み）</td><td>1人 400円を加算</td></tr>
           <tr><td>労基署への報告書の作成（50人以上）</td><td>1万円</td></tr>
@@ -284,38 +473,76 @@ footer a{color:#cfd8e3}
         </table>
       </div>
     </div>
+      </div>
+    </details>
     <div class="examples">
       <h3>総額の例（Web受検・税別）</h3>
       <div class="table-wrap">
         <table class="compare">
-          <thead><tr><th>社員数</th><th>検査のみ</th><th class="us">面接を含む例</th></tr></thead>
+          <thead><tr><th>社員数</th><th>検査のみ</th><th class="us">検査＋報告会</th></tr></thead>
           <tbody>
-            <tr><th>20人</th><td>2.5万円</td><td class="us">4.5万円（面接1回）</td></tr>
-            <tr><th>49人</th><td>2.5万円</td><td class="us">6.5万円（面接2回）</td></tr>
-            <tr><th>100人</th><td>5万円</td><td class="us">11万円（面接3回）</td></tr>
+            <tr><th>20人</th><td>2.5万円</td><td class="us">5.5万円</td></tr>
+            <tr><th>49人</th><td>2.5万円</td><td class="us">5.5万円</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fine">※ 面接の回数は例です。実際の回数は、面接を申し出た方のうち、会社からメドナビにご依頼いただいた件数です。高ストレスと判定されるのは一般に受検者の約1割で、面接を申し出る方はさらに少なくなります。サービス内容事前説明書は、お見積りの際にお渡しします。</p>
+      <p class="fine">※ 面接は、会社からご依頼いただいた場合に1回2万円が加わります。高ストレスと判定されるのは、国の実施マニュアルの基準でおおよそ受検者の1割が目安で、面接を申し出る方はさらに少なくなります。たとえば社員30人で高ストレスの方が3人いて、3人全員がメドナビでの面接を希望した場合でも、面接の費用は6万円です。面接は無料の地域産業保健センターに頼むこともできます。サービス内容事前説明書は、お見積りの際にお渡しします。</p>
     </div>
   </div>
 </section>
 
 <!-- FLOW -->
-<section class="alt" id="flow">
+<section id="flow">
   <div class="container">
     <div class="sec-head">
       <span class="en">FLOW</span>
-      <h2>ご相談から報告までの流れ</h2>
-      <p>ご相談から集団分析の報告まで、約3か月が目安です（日程の詳細は、お見積りの際にサービス内容事前説明書でご説明します）。</p>
+      <h2>ご相談から報告会までの流れ</h2>
+      <p>ご相談から報告会まで、約3か月が目安です（日程の詳細は、お見積りの際にサービス内容事前説明書でご説明します）。</p>
     </div>
     <div class="steps">
       <div class="step"><h3>ご相談・お見積り</h3><p>社員数と実施したい時期をお知らせください。オンラインで30分ほどお話しします。</p></div>
       <div class="step"><h3>準備</h3><p>ひな形をもとに、方針・社内ルール・案内文を整えます。社員の意見を聞く場の資料もお渡しします。</p></div>
       <div class="step"><h3>受検</h3><p>社員がWebで回答します。会社には、受けたかどうかだけをお知らせします。</p></div>
-      <div class="step"><h3>結果の通知・面接</h3><p>医師が本人に結果を届け、高ストレスの方に面接を勧めます。申し出があれば会社にお知らせし、会社が頼む先を選んでご依頼ください。メドナビにご依頼いただいた場合は、面接して会社に意見を伝えます。</p></div>
-      <div class="step"><h3>集団分析の報告</h3><p>職場の傾向を1枚にまとめてお渡しします。ご希望があれば報告会で改善策を一緒に考えます。</p></div>
+      <div class="step"><h3>結果の通知・面接</h3><p>医師が本人に結果を届け、高ストレスの方に面接を勧めます。申し出があれば会社にお知らせし、会社が頼む先を選んでご依頼ください。</p></div>
+      <div class="step"><h3>社長との報告会</h3><p>職場の集計を1枚にまとめ、社長と60分で読み、次の一手を決めます。</p></div>
     </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="alt" id="doctor">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">DOCTOR</span>
+      <h2>担当する医師</h2>
+    </div>
+    <div class="doctor">
+      <img src="../images/representative.jpg" alt="代表 磯部 輝紀" width="750" height="1000" loading="lazy">
+      <div>
+        <h3>磯部 輝紀（いそべ てるき）</h3>
+        <p class="role">メドナビ株式会社（設立準備中）代表／医師（産業医・総合診療科医・泌尿器科専門医）</p>
+        <p>名古屋を拠点に、産業医として中小企業の社員と面談しています。ストレスチェックを「義務だからやる検査」で終わらせず、社長が職場の今を知り、社員の働きやすさを考えるきっかけにしたいと考えています。検査、面接、社長との報告会、その後の相談まで、同じ医師が続けて受け持ちます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container faq">
+    <div class="sec-head">
+      <span class="en">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+    <details><summary>社員50人未満の会社も、ストレスチェックは義務になりますか？</summary><p>はい。法律の改正により、2028年4月1日から50人未満の事業場でも実施が義務になります。人数は会社全体ではなく、本社・支店・営業所などの事業場ごとに数えます。国は小規模な事業場に、社員のプライバシーを守るため外部への委託を勧めています。</p></details>
+    <details><summary>会社は社員のストレスチェックの結果を見られますか？</summary><p>原則として見られません。結果は医師から本人に直接届きます。会社にお渡しするのは、受検したかどうか、10人以上の集団ごとの集計、本人が同意した場合や面接指導を申し出た場合の結果と医師の意見です。</p></details>
+    <details><summary>社長との報告会では、何をするのですか？</summary><p>集団分析の結果（10人以上の集団の集計）を、医師と社長・担当者で60分ほど一緒に読みます。どこに負担が偏っているか、何が支えになっているかを確かめ、来月からできることを1つ決めます。個人が特定される話はしません。</p></details>
+    <details><summary>面接の料金が、会社の知らないうちにかかることはありませんか？</summary><p>ありません。面接は、本人の申し出があり、会社からメドナビに1件ずつご依頼いただいた場合にだけ行います。申し出があれば会社にお知らせします。なお、面接指導の対象となった方（高ストレスと判定され、医師が面接を必要と認めた方）から申し出があった場合、会社は医師による面接指導を行う必要があります（労働安全衛生法第66条の10。50人未満の事業場は2028年4月から義務）。頼む先は会社が選べます（地域産業保健センターなら無料です）。</p></details>
+    <details><summary>社員に受検を義務づけてもいいですか？</summary><p>社員に受検の義務はありません。受けるよう勧めることはできますが、受けないこと、結果の提供に同意しないこと、面接を申し出ないことを理由に不利益な扱いをすることは禁じられています。</p></details>
+    <details><summary>他社でストレスチェックを受けています。面接指導だけ頼めますか？</summary><p>はい。1回2万円（税別・意見書込み）で、面接指導だけをお引き受けします。</p></details>
+    <details><summary>ストレスチェックで、うつ病などの病気が分かりますか？</summary><p>ストレスチェックは病気を診断する検査ではありません。社員が自分のストレスの状態に気づき、必要なときに医師に相談し、職場の改善につなげるための仕組みです。</p></details>
+    <details><summary>名古屋・愛知以外の会社でも頼めますか？</summary><p>受検、面接、報告会はオンラインで行えるため、ご相談ください。訪問が必要な場合は、愛知県内を中心にお引き受けしています。</p></details>
+    <details><summary>今の産業医がいます。それでも頼めますか？</summary><p>はい。今の産業医の先生に共同実施者として入っていただく形もとれます。まずはご相談ください。</p></details>
   </div>
 </section>
 
@@ -336,55 +563,31 @@ footer a{color:#cfd8e3}
   </div>
 </section>
 
-<!-- DOCTOR -->
-<section class="alt" id="doctor">
-  <div class="container">
-    <div class="sec-head">
-      <span class="en">DOCTOR</span>
-      <h2>実施者・面接を担当する医師</h2>
-    </div>
-    <div class="doctor">
-      <img src="../images/representative.jpg" alt="代表 磯部 輝紀" width="750" height="1000" loading="lazy">
-      <div>
-        <h3>磯部 輝紀（いそべ てるき）</h3>
-        <p class="role">メドナビ株式会社（設立準備中）代表／医師（産業医・総合診療科医・泌尿器科専門医）</p>
-        <p>名古屋を拠点に、産業医として中小企業の社員と面談しています。ストレスチェックは検査で終わらせず、結果が出たあとの面接や働き方の調整まで、同じ医師が続けて受け持ちます。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container faq">
-    <div class="sec-head">
-      <span class="en">FAQ</span>
-      <h2>よくあるご質問</h2>
-    </div>
-    <details><summary>社員50人未満の会社も、ストレスチェックは義務になりますか？</summary><p>はい。法律の改正により、2028年4月1日から50人未満の事業場でも実施が義務になります。人数は会社全体ではなく、本社・支店・営業所などの事業場ごとに数えます。国は小規模な事業場に、社員のプライバシーを守るため外部への委託を勧めています。</p></details>
-    <details><summary>会社は社員のストレスチェックの結果を見られますか？</summary><p>原則として見られません。結果は医師から本人に直接届きます。会社にお渡しするのは、受検したかどうか、10人以上の集団ごとの集計、本人が同意した場合や面接指導を申し出た場合の結果と医師の意見です。</p></details>
-    <details><summary>社員に受検を義務づけてもいいですか？</summary><p>社員に受検の義務はありません。受けるよう勧めることはできますが、受けないこと、結果の提供に同意しないこと、面接を申し出ないことを理由に不利益な扱いをすることは禁じられています。</p></details>
-    <details><summary>面接の料金が、会社の知らないうちにかかることはありませんか？</summary><p>ありません。面接は、本人の申し出があり、会社からメドナビに1件ずつご依頼いただいた場合にだけ行います。申し出があれば会社にお知らせします。なお、面接指導の対象となった方（高ストレスと判定され、医師が面接を必要と認めた方）から申し出があった場合、会社は医師による面接指導を行う必要があります（労働安全衛生法第66条の10。50人未満の事業場は2028年4月から義務）。頼む先は会社が選べます（地域産業保健センターなら無料です）。</p></details>
-    <details><summary>他社でストレスチェックを受けています。面接指導だけ頼めますか？</summary><p>はい。1回2万円（税別・意見書込み）で、面接指導だけをお引き受けします。</p></details>
-    <details><summary>ストレスチェックで、うつ病などの病気が分かりますか？</summary><p>ストレスチェックは病気を診断する検査ではありません。社員が自分のストレスの状態に気づき、必要なときに医師に相談し、職場の改善につなげるための仕組みです。</p></details>
-    <details><summary>名古屋・愛知以外の会社でも頼めますか？</summary><p>受検と面接はオンラインで行えるため、ご相談ください。訪問が必要な場合は、愛知県内を中心にお引き受けしています。</p></details>
-    <details><summary>今の産業医がいます。それでも頼めますか？</summary><p>はい。今の産業医の先生に共同実施者として入っていただく形もとれます。まずはご相談ください。</p></details>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="container">
     <span class="en">CONTACT</span>
-    <h2>まずは、30分の無料相談から。</h2>
+    <h2>まずは30分、<br>職場のことを聞かせてください。</h2>
     <p>「何から始めればいいか」だけのご相談でもかまいません。</p>
-    <ul>
-      <li>社員数と、実施したい時期</li>
-      <li>今の産業医の有無</li>
-      <li>ストレスチェックの実施が、はじめてかどうか</li>
-    </ul>
-    <p style="margin-top:10px">をフォームでお知らせください。担当の医師から順にご連絡します。</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeF6QFRc60WYbavuzhzeRi-msKDbGkxGaXLs9l8NWaJLPV_Jw/viewform" class="btn btn-mint" target="_blank" rel="noopener">お問い合わせフォーム</a>
+    <div class="why-now">
+      <h3>30分の相談で分かること</h3>
+      <ul>
+        <li>自社のどの事業場が、いつから義務の対象になるか</li>
+        <li>いつまでに、何を準備すればよいか</li>
+        <li>面接まで含めて、自社の場合の費用が最大でいくらになるか</li>
+      </ul>
+      <h3 style="margin-top:14px">相談のあとにお渡しするもの</h3>
+      <ul>
+        <li>事業場ごとに「いつまでに、何をするか」をまとめた予定表（1枚）</li>
+      </ul>
+      <h3 style="margin-top:14px">義務になる前に始める理由</h3>
+      <ul>
+        <li>義務化の前年（2027年度）に一度やっておくと、義務の年は2年目として、前の年の数字と比べて職場の変化が分かります</li>
+        <li>初めての年の段取り（ご相談から報告会まで約3か月）を、義務化直前の慌ただしい時期を避けて進められます</li>
+      </ul>
+    </div>
+    <p style="margin-top:18px">フォームには、分かる範囲で社員数と時期をお書きください。担当の医師から順にご連絡します。</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeF6QFRc60WYbavuzhzeRi-msKDbGkxGaXLs9l8NWaJLPV_Jw/viewform" class="btn btn-mint" target="_blank" rel="noopener">無料相談を申し込む</a>
     <p class="small">Googleフォームが別タブで開きます。社労士の先生からの資料請求も、こちらからどうぞ。</p>
   </div>
 </section>

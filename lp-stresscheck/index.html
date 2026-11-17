@@ -354,6 +354,40 @@ body{padding-bottom:72px}
   .ob-cards{grid-template-columns:1fr}
   .ob-cta .btn{width:100%}
 }
+
+/* v6 hero：写真を背景いっぱいに使う */
+.hero-v6{position:relative;padding:0;background:var(--navy);color:#fff;overflow:hidden;min-height:min(700px,calc(100vh - 76px));display:flex;align-items:center}
+.hv-bg{position:absolute;inset:0}
+.hv-bg img{width:100%;height:100%;object-fit:cover;object-position:72% 30%}
+.hv-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,27,43,.97) 0%,rgba(17,27,43,.92) 34%,rgba(17,27,43,.55) 56%,rgba(17,27,43,0) 76%)}
+.hv-inner{position:relative;z-index:1;padding:64px 0}
+.hv-text{max-width:540px}
+.hv-badge{display:inline-block;font-size:.85rem;font-weight:700;color:var(--mint);border:1px solid rgba(79,196,176,.5);padding:5px 14px;border-radius:999px}
+.hero-v6 h1.hv-title{font-size:clamp(2rem,4.2vw,2.9rem);font-weight:900;line-height:1.4;margin:18px 0 16px;color:#fff}
+.hero-v6 h1.hv-title em{font-style:normal;color:var(--mint)}
+.hv-lead{color:#d3dbe6;font-size:1.02rem;line-height:1.85}
+.hv-strength{margin-top:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:16px 18px;backdrop-filter:blur(4px)}
+.hv-strength .os-label{color:var(--mint)}
+.hv-strength .os-flow li{background:var(--mint);color:var(--navy)}
+.hv-strength .os-flow li:not(:last-child)::after{color:var(--mint)}
+.hv-strength .os-text{color:#e2e8f0}
+.hero-v6 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hv-ghost{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.hv-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.hv-note{font-size:.84rem;color:#a9b6c6;margin-top:14px}
+.catch-band{padding:84px 0 76px;text-align:center;background:#fff}
+.catch-band .catch{font-size:clamp(1.9rem,5vw,3rem);font-weight:900;line-height:1.45;color:var(--navy)}
+.catch-band .catch em{font-style:normal;color:var(--mint-strong)}
+.catch-sub{margin-top:16px;font-weight:700;color:var(--sub);font-size:1.05rem}
+@media (max-width:860px){
+  .hero-v6{display:block;min-height:0}
+  .hv-bg{position:relative;height:auto;aspect-ratio:16/10}
+  .hv-bg img{object-position:68% 30%}
+  .hv-bg::after{background:linear-gradient(180deg,rgba(17,27,43,0) 45%,rgba(17,27,43,1) 100%)}
+  .hv-inner{padding:0 0 44px;margin-top:-28px}
+  .hero-v6 h1.hv-title{margin-top:14px}
+  .catch-band{padding:60px 0 52px}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -462,25 +496,32 @@ body{padding-bottom:72px}
 
 <main>
 <!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="badge badge-mint">社員数にかかわらず、ご依頼いただけます</span>
-      <h1 class="page-title">あなたの会社の<span class="nw">ストレスチェック、</span><br>医師にお任せください。</h1>
-      <p class="catch">会社が回るのは、<br><em>社員が元気だから。</em></p>
-      <p class="lead">準備の書類づくりから、社員の受検、結果のお知らせ、社長への報告会まで。社員数にかかわらず、ストレスチェックを医師がまとめて引き受けます。</p>
-      <div class="onestop">
+<section class="hero hero-v6">
+  <div class="hv-bg"><img src="../images/interview.jpg" alt="社員と面談する産業医" width="1600" height="900"></div>
+  <div class="container hv-inner">
+    <div class="hv-text">
+      <span class="hv-badge">社員数にかかわらず、ご依頼いただけます</span>
+      <h1 class="hv-title">あなたの会社の<br><span class="nw">ストレスチェック、</span><br><em>医師にお任せください。</em></h1>
+      <p class="hv-lead">準備の書類づくりから、社員の受検、結果のお知らせ、社長への報告会まで。ストレスチェックを医師がまとめて引き受けます。</p>
+      <div class="hv-strength">
         <p class="os-label">メドナビの強み</p>
         <ol class="os-flow"><li>実施</li><li>分析</li><li>職場改善</li></ol>
-        <p class="os-text">産業医がワンストップで、ストレスチェックの実施から分析、職場改善までつなげます。代表は経営大学院修士（MBA）。結果を会社の実務に落とし込む視点で、社長と次の一手を考えます。</p>
+        <p class="os-text">産業医がワンストップで、実施から分析、職場改善までつなげます。代表は経営大学院修士（MBA）。結果を会社の実務に落とし込む視点で、社長と次の一手を考えます。</p>
       </div>
       <div class="actions">
-        <a href="#contact" class="btn btn-primary">30分の無料相談</a>
-        <a href="#story" class="btn btn-ghost">社長が得られること</a>
+        <a href="#contact" class="btn btn-mint">30分の無料相談</a>
+        <a href="#story" class="btn hv-ghost">社長が得られること</a>
       </div>
-      <p class="note">名古屋・愛知を中心に、オンラインでも対応しています。</p>
+      <p class="hv-note">名古屋・愛知を中心に、オンラインでも対応しています。</p>
     </div>
-    <div class="hero-img"><img src="../images/interview.jpg" alt="社員と面談する産業医" width="1600" height="900"></div>
+  </div>
+</section>
+
+<!-- CATCH -->
+<section class="catch-band">
+  <div class="container">
+    <p class="catch">会社が回るのは、<br><em>社員が元気だから。</em></p>
+    <p class="catch-sub">その当たり前を、年に一度、数字で確かめませんか。</p>
   </div>
 </section>
 
@@ -489,7 +530,7 @@ body{padding-bottom:72px}
   <div class="container">
     <div class="sec-head">
       <span class="en">HONESTLY</span>
-      <h2>正直、やらなくていいなら、<br>やりたくない。</h2>
+      <h2>正直、ストレスチェックは<br>やらなくていいなら、やりたくない。</h2>
       <p>そう感じている社長は、少なくないはずです。</p>
     </div>
     <div class="cards cards-4">

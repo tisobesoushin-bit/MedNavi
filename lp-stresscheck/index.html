@@ -135,6 +135,23 @@ footer .row{display:flex;justify-content:space-between;align-items:center;gap:12
 footer img{height:20px;width:auto;opacity:.85}
 footer a{color:#cfd8e3}
 
+/* v3 trust */
+.hero-facts{margin-top:22px;max-width:560px}
+.hero-facts div{padding:10px 14px}
+.hero-facts b{font-size:1.02rem}
+.hero-facts span{display:block;line-height:1.5}
+.hero .ease{font-size:.9rem;font-weight:700;color:var(--navy);margin-top:12px}
+.strip{background:var(--navy);color:#fff;padding:26px 0}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.strip-grid div{padding:4px 20px;border-left:1px solid rgba(255,255,255,.18)}
+.strip-grid div:first-child{border-left:0;padding-left:0}
+.strip-grid b{display:block;font-size:1.12rem;font-weight:900;color:var(--mint);line-height:1.4}
+.strip-grid span{display:block;font-size:.82rem;color:#c8d2de;line-height:1.6;margin-top:4px}
+@media (max-width:860px){
+  .strip-grid{grid-template-columns:1fr 1fr;gap:18px 0}
+  .strip-grid div:nth-child(3){border-left:0;padding-left:0}
+}
+
 /* v2 story */
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .hero-img img{border-radius:22px;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;box-shadow:0 20px 50px rgba(17,27,43,.12)}
@@ -216,7 +233,10 @@ footer a{color:#cfd8e3}
   .sr{padding:32px 22px}
 }
 @media (max-width:520px){
-  .hero-facts{grid-template-columns:1fr}
+  .hero-facts{grid-template-columns:repeat(3,1fr);gap:8px}
+  .hero-facts div{padding:8px 10px}
+  .hero-facts b{font-size:.86rem}
+  .hero-facts span{font-size:.72rem}
   .hero .actions .btn{width:100%}
   .amount b{font-size:2.4rem}
   .compare{font-size:.86rem}
@@ -319,18 +339,34 @@ footer a{color:#cfd8e3}
   <div class="container hero-grid">
     <div>
       <span class="badge">2028年4月から、社員50人未満の事業場もストレスチェックが義務に</span>
-      <h1>会社が回っているのは、<br><em>社員が元気でいてくれる</em><br>からです。</h1>
+      <h1>会社が回るのは、<br><em>社員が元気だから。</em></h1>
       <p class="kicker">その当たり前を、年に一度、数字で確かめませんか。</p>
       <p class="lead">義務のストレスチェックを「やらされる検査」で終わらせず、職場の集計を社長と産業医で一緒に読み、来月からの一手を決める。検査から社長との振り返りまで、同じ医師が受け持ちます。</p>
+      <div class="hero-facts">
+        <div><b>産業医</b><span>医師が実施者を務めます</span></div>
+        <div><b>総合診療科医</b><span>心と体の相談を受け持ちます</span></div>
+        <div><b>泌尿器科専門医</b><span>担当医の専門資格</span></div>
+      </div>
       <div class="actions">
         <a href="#contact" class="btn btn-primary">30分の無料相談</a>
         <a href="#story" class="btn btn-ghost">社長が得られること</a>
       </div>
+      <p class="ease">相談は無料・オンライン30分。「何から始めればいいか」だけでもかまいません。</p>
       <p class="note">名古屋・愛知を中心に、オンラインでも対応しています。</p>
     </div>
     <div class="hero-img"><img src="../images/interview.jpg" alt="社員と面談する産業医" width="1600" height="900"></div>
   </div>
 </section>
+
+<!-- VALUE STRIP -->
+<div class="strip">
+  <div class="container strip-grid">
+    <div><b>5.5万円</b><span>社員49人まで・検査＋社長との報告会（税別）</span></div>
+    <div><b>同じ医師が担当</b><span>検査・面接・報告会・休職と復職の相談まで</span></div>
+    <div><b>ひな形をご用意</b><span>担当者がいない会社でも回ります</span></div>
+    <div><b>面接は依頼分だけ</b><span>1回2万円・頼む先は会社が選べます</span></div>
+  </div>
+</div>
 
 <!-- HONEST -->
 <section class="alt" id="honest">

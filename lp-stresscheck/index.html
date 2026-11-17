@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>社員50人未満のストレスチェック｜社長と産業医で職場を見直す｜名古屋のメドナビ</title>
-<meta name="description" content="2028年4月から、社員50人未満の事業場もストレスチェックが義務になります。メドナビは医師が実施者になり、職場の集計を社長と産業医で一緒に読み、次の一手を決めるところまで受け持ちます。名古屋・愛知、オンライン対応。">
+<title>ストレスチェックを医師にお任せ｜社長と産業医で職場を見直す｜名古屋のメドナビ</title>
+<meta name="description" content="社員数にかかわらず、ストレスチェックを医師が実施者として受け持ちます。職場の集計を社長と産業医で一緒に読み、次の一手を決めるところまで。2028年4月からは社員50人未満の事業場も義務になります。名古屋・愛知、オンライン対応。">
 <meta property="og:title" content="ストレスチェックを「やらされる検査」で終わらせない｜メドナビ">
 <meta property="og:description" content="社員が元気に働いてくれるから、会社は回っている。年に一度、職場の数字で確かめ、社長と産業医で次の一手を決めます。">
 <meta property="og:type" content="website">
@@ -293,6 +293,67 @@ body{padding-bottom:72px}
   .nav .cta{padding:8px 14px;font-size:.8rem}
   .cta-bar a{font-size:.84rem}
 }
+
+/* v5 自己紹介（トップページと同じ構成） */
+.message{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center}
+.message .photo{border-radius:24px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 10px 30px rgba(17,27,43,.08)}
+.message .photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.message h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:900;line-height:1.5;margin:8px 0 18px;color:var(--navy)}
+.message p{color:var(--sub);margin-bottom:14px}
+.message .sign{color:var(--ink);font-weight:700;margin-top:18px}
+.message .sign span{display:block;font-weight:400;font-size:.88rem;color:var(--sub)}
+@media (max-width:860px){.message{grid-template-columns:1fr;gap:28px}.message .photo{max-width:280px;margin-inline:auto}}
+
+/* v5 自己紹介（全ページ共通）の肩書き */
+.cred{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.cred div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.cred span{display:block;font-size:.78rem;color:var(--sub);line-height:1.5}
+.cred b{display:block;font-size:1rem;font-weight:900;color:var(--navy);line-height:1.5}
+@media (max-width:560px){.cred b{font-size:.9rem}.cred div{padding:10px 12px}}
+
+/* v5 冒頭：何のページかを先に伝える */
+.hero h1.page-title{font-size:clamp(1.45rem,3.2vw,2rem);line-height:1.5;margin:18px 0 10px;color:var(--navy)}
+.hero .catch{font-size:clamp(1.9rem,5vw,3rem);font-weight:900;line-height:1.38;color:var(--navy);margin:0 0 16px}
+.hero .catch em{font-style:normal;color:var(--mint-strong)}
+@media (max-width:860px){.hero h1.page-title{margin:12px 0 8px}}
+
+/* v5 強み：ワンストップ */
+.onestop{margin-top:20px;background:#fff;border:1.5px solid var(--mint-strong);border-radius:16px;padding:16px 18px;max-width:560px}
+.os-label{font-size:.8rem;font-weight:900;color:var(--mint-strong);letter-spacing:.06em}
+.os-flow{list-style:none;display:flex;align-items:center;gap:8px;margin:8px 0 10px;flex-wrap:wrap}
+.os-flow li{background:var(--navy);color:#fff;font-weight:700;font-size:.92rem;padding:6px 16px;border-radius:999px}
+.os-flow li:not(:last-child)::after{content:"→";color:var(--mint-strong);font-weight:900;margin-left:16px;margin-right:-8px}
+.os-flow li{position:relative}
+.os-flow li:not(:last-child){margin-right:22px}
+.os-flow li:not(:last-child)::after{position:absolute;right:-24px;top:50%;transform:translateY(-50%);margin:0}
+.os-text{font-size:.9rem;color:var(--ink);line-height:1.75}
+
+/* v6 規模を問わない＋義務化セクション */
+.badge-mint{background:var(--mint-soft);color:var(--mint-strong)}
+.obligation{background:#fff8f2}
+.obligation .sec-head h2{line-height:1.6}
+.obligation .sec-head p{max-width:44em;margin-inline:auto}
+.ob-line{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;max-width:820px;margin:0 auto 44px}
+.ob-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.ob-box p{color:var(--ink);font-size:.98rem}
+.ob-box .when{font-weight:900;color:var(--sub);font-size:.85rem;margin-bottom:6px}
+.ob-next{border:2px solid var(--warn)}
+.ob-next .when{color:var(--warn)}
+.ob-next p b{color:var(--warn)}
+.ob-arrow{font-size:2rem;font-weight:900;color:var(--warn)}
+.ob-head{text-align:center;font-size:clamp(1.15rem,2.6vw,1.45rem);font-weight:900;color:var(--navy);margin-bottom:20px}
+.ob-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ob-cards div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.ob-cards .n{font-family:Montserrat,sans-serif;font-weight:800;color:var(--warn);font-size:1.3rem}
+.ob-cards h4{font-size:1.08rem;font-weight:900;color:var(--navy);margin:6px 0 6px;line-height:1.5}
+.ob-cards p{font-size:.92rem;color:var(--sub)}
+.ob-cta{text-align:center;margin-top:30px}
+@media (max-width:860px){
+  .ob-line{grid-template-columns:1fr;gap:8px}
+  .ob-arrow{transform:rotate(90deg);text-align:center;font-size:1.6rem}
+  .ob-cards{grid-template-columns:1fr}
+  .ob-cta .btn{width:100%}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -391,7 +452,7 @@ body{padding-bottom:72px}
       </ul>
       <div class="gnav-cta">
         <a href="#contact" class="main">無料相談を申し込む</a>
-        <a href="./" class="sub">50人未満のストレスチェック</a>
+        <a href="./" class="sub">ストレスチェック</a>
       </div>
     </nav>
     <a href="#contact" class="cta">無料で相談</a>
@@ -404,36 +465,24 @@ body{padding-bottom:72px}
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="badge">2028年4月から、社員50人未満の事業場もストレスチェックが義務に</span>
-      <h1>会社が回るのは、<br><em>社員が元気だから。</em></h1>
-      <p class="kicker">その当たり前を、年に一度、数字で確かめませんか。</p>
-      <p class="lead">義務のストレスチェックを「やらされる検査」で終わらせず、職場の集計を社長と産業医で一緒に読み、来月からの一手を決める。検査から社長との振り返りまで、同じ医師が受け持ちます。</p>
-      <div class="hero-facts">
-        <div><span>産業医面談</span><b>500件以上</b></div>
-        <div><span>資格</span><b>健康経営アドバイザー</b></div>
-        <div><span>学位</span><b>経営大学院 修士（MBA）</b></div>
-        <div><span>担当企業</span><b>製造業からサービス業まで</b></div>
+      <span class="badge badge-mint">社員数にかかわらず、ご依頼いただけます</span>
+      <h1 class="page-title">あなたの会社の<span class="nw">ストレスチェック、</span><br>医師にお任せください。</h1>
+      <p class="catch">会社が回るのは、<br><em>社員が元気だから。</em></p>
+      <p class="lead">準備の書類づくりから、社員の受検、結果のお知らせ、社長への報告会まで。社員数にかかわらず、ストレスチェックを医師がまとめて引き受けます。</p>
+      <div class="onestop">
+        <p class="os-label">メドナビの強み</p>
+        <ol class="os-flow"><li>実施</li><li>分析</li><li>職場改善</li></ol>
+        <p class="os-text">産業医がワンストップで、ストレスチェックの実施から分析、職場改善までつなげます。代表は経営大学院修士（MBA）。結果を会社の実務に落とし込む視点で、社長と次の一手を考えます。</p>
       </div>
       <div class="actions">
         <a href="#contact" class="btn btn-primary">30分の無料相談</a>
         <a href="#story" class="btn btn-ghost">社長が得られること</a>
       </div>
-      <p class="ease">相談は無料・オンライン30分。「何から始めればいいか」だけでもかまいません。</p>
       <p class="note">名古屋・愛知を中心に、オンラインでも対応しています。</p>
     </div>
     <div class="hero-img"><img src="../images/interview.jpg" alt="社員と面談する産業医" width="1600" height="900"></div>
   </div>
 </section>
-
-<!-- VALUE STRIP -->
-<div class="strip">
-  <div class="container strip-grid">
-    <div><b>5.5万円</b><span>社員49人まで・検査＋社長との報告会（税別）</span></div>
-    <div><b>同じ医師が担当</b><span>検査・面接・報告会・休職と復職の相談まで</span></div>
-    <div><b>ひな形をご用意</b><span>担当者がいない会社でも回ります</span></div>
-    <div><b>面接は依頼分だけ</b><span>1回2万円・頼む先は会社が選べます</span></div>
-  </div>
-</div>
 
 <!-- HONEST -->
 <section class="alt" id="honest">
@@ -514,6 +563,29 @@ body{padding-bottom:72px}
   </div>
 </section>
 
+<!-- OBLIGATION：50人未満の義務化 -->
+<section id="obligation" class="obligation">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">DID YOU KNOW</span>
+      <h2>ご存知ですか？<br>2028年4月から、社員50人未満の事業場も<br>ストレスチェックが義務になります。</h2>
+      <p>社員50人以上の事業場では、すでに年1回の実施が義務です。法律の改正で、その対象がすべての事業場に広がります。人数は会社全体ではなく、本社・支店・営業所などの事業場ごとに数えます。</p>
+    </div>
+    <div class="ob-line">
+      <div class="ob-box"><p class="when">いま</p><p><b>50人以上</b>の事業場：義務</p><p><b>50人未満</b>の事業場：努力義務</p></div>
+      <div class="ob-arrow" aria-hidden="true">→</div>
+      <div class="ob-box ob-next"><p class="when">2028年4月から</p><p><b>すべての事業場</b>で義務</p></div>
+    </div>
+    <h3 class="ob-head">50人未満の会社こそ、早めの導入をおすすめします</h3>
+    <div class="ob-cards">
+      <div><span class="n">01</span><h4>前の年と比べられる</h4><p>義務化の前年（2027年度）に一度やっておくと、義務の年は2年目になります。前の年の数字と比べて、職場の変化が分かります。</p></div>
+      <div><span class="n">02</span><h4>慌ただしい時期を避けられる</h4><p>初めての年は、ご相談から報告会まで約3か月かかります。義務化の直前を避けて、余裕をもって段取りできます。</p></div>
+      <div><span class="n">03</span><h4>不調の前触れに早く気づける</h4><p>社員30〜49人の事業所の約5か所に1か所で、メンタル不調による長期の休みや退職がありました。早く職場の数字を見ておくほど、対応は軽く済みます。</p></div>
+    </div>
+    <div class="ob-cta"><a href="#contact" class="btn btn-primary">自社がいつから対象か、無料相談で確かめる</a></div>
+  </div>
+</section>
+
 <!-- RELIEF -->
 <section id="relief">
   <div class="container">
@@ -586,6 +658,7 @@ body{padding-bottom:72px}
           <tbody>
             <tr><th>20人</th><td>2.5万円</td><td class="us">5.5万円</td></tr>
             <tr><th>49人</th><td>2.5万円</td><td class="us">5.5万円</td></tr>
+            <tr><th>100人</th><td>5万円</td><td class="us">8万円</td></tr>
           </tbody>
         </table>
       </div>
@@ -614,17 +687,19 @@ body{padding-bottom:72px}
 
 <!-- DOCTOR -->
 <section class="alt" id="doctor">
-  <div class="container">
-    <div class="sec-head">
+  <div class="container message">
+    <div class="photo"><img src="../images/representative.jpg" alt="代表 磯部 輝紀" width="750" height="1000" loading="lazy"></div>
+    <div>
       <span class="en">DOCTOR</span>
       <h2>担当する医師</h2>
-    </div>
-    <div class="doctor">
-      <img src="../images/representative.jpg" alt="代表 磯部 輝紀" width="750" height="1000" loading="lazy">
-      <div>
-        <h3>磯部 輝紀（いそべ てるき）</h3>
-        <p class="role">メドナビ株式会社（設立準備中）代表／医師（産業医・総合診療科医・泌尿器科専門医）</p>
-        <p>名古屋を拠点に、産業医として中小企業の社員と面談しています。ストレスチェックを「義務だからやる検査」で終わらせず、社長が職場の今を知り、社員の働きやすさを考えるきっかけにしたいと考えています。検査、面接、社長との報告会、その後の相談まで、同じ医師が続けて受け持ちます。</p>
+      <p>名古屋を拠点に、産業医として中小企業の社員と面談しています。ストレスチェックを「義務だからやる検査」で終わらせず、社長が職場の今を知り、社員の働きやすさを考えるきっかけにしたいと考えています。検査、面接、社長との報告会、その後の相談まで、同じ医師が続けて受け持ちます。</p>
+      <p>経営大学院でMBAを取得しました。ストレスチェックの結果を数字の説明で終わらせず、仕事の割り振りや人の配置など、会社の実務につなげる視点で社長と話し合います。</p>
+      <p class="sign">代表　磯部 輝紀（いそべ てるき）<span>メドナビ株式会社（設立準備中）／医師（産業医・総合診療科医・泌尿器科専門医）</span></p>
+      <div class="cred">
+        <div><span>産業医面談</span><b>500件以上</b></div>
+        <div><span>資格</span><b>健康経営アドバイザー</b></div>
+        <div><span>学位</span><b>経営大学院 修士（MBA）</b></div>
+        <div><span>担当企業</span><b>製造業からサービス業まで</b></div>
       </div>
     </div>
   </div>
@@ -683,11 +758,6 @@ body{padding-bottom:72px}
       <ul>
         <li>事業場ごとに「いつまでに、何をするか」をまとめた予定表（1枚）</li>
       </ul>
-      <h3 style="margin-top:14px">義務になる前に始める理由</h3>
-      <ul>
-        <li>義務化の前年（2027年度）に一度やっておくと、義務の年は2年目として、前の年の数字と比べて職場の変化が分かります</li>
-        <li>初めての年の段取り（ご相談から報告会まで約3か月）を、義務化直前の慌ただしい時期を避けて進められます</li>
-      </ul>
     </div>
     <p style="margin-top:18px">フォームには、分かる範囲で社員数と時期をお書きください。担当の医師から順にご連絡します。</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeF6QFRc60WYbavuzhzeRi-msKDbGkxGaXLs9l8NWaJLPV_Jw/viewform" class="btn btn-mint" target="_blank" rel="noopener">無料相談を申し込む</a>
@@ -696,7 +766,7 @@ body{padding-bottom:72px}
 </section>
 </main>
 
-<div class="cta-bar" aria-label="お問い合わせ"><a href="#contact" class="main">30分の無料相談</a><a href="#price" class="sub">料金を見る</a></div>
+<div class="cta-bar" aria-label="お問い合わせ"><a href="#contact" class="main">30分の無料相談</a></div>
 <footer>
   <div class="container row">
     <a href="../index.html"><img src="../images/logo.png" alt="MedNavi"></a>

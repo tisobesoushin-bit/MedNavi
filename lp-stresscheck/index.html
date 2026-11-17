@@ -242,6 +242,57 @@ footer a{color:#cfd8e3}
   .compare{font-size:.86rem}
   .compare th,.compare td{padding:12px 10px}
 }
+
+/* v4 site header（サイト全体の案内役）＋下部固定CTA */
+header{position:sticky;top:0;z-index:60;background:var(--navy)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px;padding-top:0;flex-wrap:nowrap}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;flex-shrink:0}
+.brand img,.nav .brand img{height:36px;width:auto}
+.brand .tagline{font-size:.78rem;font-weight:700;color:#c8d2de;line-height:1.3;padding-left:14px;border-left:1px solid rgba(255,255,255,.22);white-space:nowrap}
+header .container.nav{width:min(1200px,100% - 32px)}
+.gnav{margin-left:auto}
+.gnav ul{display:flex;gap:24px;list-style:none;color:#cfd8e3;font-size:.9rem;margin:0;padding:0;overflow:visible;width:auto;order:0}
+.gnav ul a{display:block;padding:6px 0;white-space:nowrap;text-decoration:none;color:inherit}
+.gnav ul a:hover,.gnav ul a.active,.gnav ul a[aria-current]{color:#fff}
+.gnav ul a.active,.gnav ul a[aria-current]{box-shadow:inset 0 -2px 0 var(--mint)}
+.gnav-cta{display:none}
+.nav .cta{white-space:nowrap;background:var(--mint-strong);color:#fff;padding:10px 20px;border-radius:999px;font-weight:700;font-size:.9rem;text-decoration:none;flex-shrink:0}
+.nav .cta:hover{background:#fff;color:var(--navy)}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.3);border-radius:10px;color:#fff;width:44px;height:44px;cursor:pointer;position:relative;flex-shrink:0}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{position:absolute;left:12px;width:18px;height:2px;background:#fff;border-radius:2px;transition:.2s;content:""}
+.menu-btn span{top:21px}.menu-btn span::before{top:-6px;left:0}.menu-btn span::after{top:6px;left:0}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+.cta-bar{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:10px;transform:translateY(110%);transition:transform .25s}
+.cta-bar.show{transform:none}
+.cta-bar a{flex:1;max-width:280px;text-align:center;padding:12px 10px;border-radius:999px;font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap}
+.cta-bar .main{background:var(--navy);color:#fff}
+.cta-bar .sub{border:1.5px solid var(--navy);color:var(--navy);background:#fff}
+body{padding-bottom:72px}
+@media (max-width:1180px){
+  html{scroll-padding-top:76px}
+  .nav .cta{margin-left:auto}
+  .gnav{position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 18px 40px rgba(17,27,43,.18);display:none;padding:8px 16px 20px;margin:0}
+  .gnav.open{display:block}
+  .gnav ul{flex-direction:column;gap:0;color:var(--navy);font-size:1rem}
+  .gnav ul li{border-bottom:1px solid var(--line)}
+  .gnav ul a{padding:14px 4px;font-weight:700}
+  .gnav ul a:hover,.gnav ul a.active,.gnav ul a[aria-current]{color:var(--mint-strong);box-shadow:none}
+  .gnav-cta{display:grid;gap:10px;margin-top:16px}
+  .gnav-cta a{display:block;text-align:center;padding:14px;border-radius:999px;font-weight:700;text-decoration:none}
+  .gnav-cta .main{background:var(--navy);color:#fff}
+  .gnav-cta .sub{border:1.5px solid var(--navy);color:var(--navy)}
+  .menu-btn{display:block}
+  .nav{gap:10px}
+}
+@media (max-width:560px){
+  .nav{height:64px}
+  .brand img,.nav .brand img{height:28px}
+  .brand .tagline{display:none}
+  .nav .cta{padding:8px 14px;font-size:.8rem}
+  .cta-bar a{font-size:.84rem}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -328,8 +379,23 @@ footer a{color:#cfd8e3}
 
 <header>
   <div class="container nav">
-    <a href="../index.html" aria-label="MedNavi トップへ"><img src="../images/logo.png" alt="MedNavi"></a>
-    <a href="#contact" class="cta">無料で相談する</a>
+    <a href="../index.html" class="brand" aria-label="MedNavi トップへ"><img src="../images/logo.png" alt="MedNavi"><span class="tagline">会社のかかりつけ産業医</span></a>
+    <nav class="gnav" id="gnav" aria-label="サイト内メニュー">
+      <ul>
+        <li><a href="../index.html#service">産業医サービス</a></li>
+        <li><a href="./" aria-current="page">ストレスチェック</a></li>
+        <li><a href="../index.html#price">料金</a></li>
+        <li><a href="../index.html#voice">導入企業の声</a></li>
+        <li><a href="../index.html#about">会社概要</a></li>
+        <li><a href="../index.html#faq">よくある質問</a></li>
+      </ul>
+      <div class="gnav-cta">
+        <a href="#contact" class="main">無料相談を申し込む</a>
+        <a href="./" class="sub">50人未満のストレスチェック</a>
+      </div>
+    </nav>
+    <a href="#contact" class="cta">無料で相談</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開閉"><span></span></button>
   </div>
 </header>
 
@@ -630,11 +696,22 @@ footer a{color:#cfd8e3}
 </section>
 </main>
 
+<div class="cta-bar" aria-label="お問い合わせ"><a href="#contact" class="main">30分の無料相談</a><a href="#price" class="sub">料金を見る</a></div>
 <footer>
   <div class="container row">
     <a href="../index.html"><img src="../images/logo.png" alt="MedNavi"></a>
     <span>メドナビ株式会社（設立準備中）&copy; 2026 MedNavi</span>
   </div>
 </footer>
+<script>
+(()=>{const b=document.querySelector('.menu-btn'),n=document.getElementById('gnav');
+ if(b&&n){b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded',false)}))}
+ const bar=document.querySelector('.cta-bar'),hero=document.querySelector('.hero'),ct=document.getElementById('contact');
+ if(bar){let pastHero=false,atContact=false;const upd=()=>bar.classList.toggle('show',pastHero&&!atContact);
+  if(hero)new IntersectionObserver(e=>{pastHero=!e[0].isIntersecting;upd()}).observe(hero);
+  if(ct)new IntersectionObserver(e=>{atContact=e[0].isIntersecting;upd()}).observe(ct);}
+})();
+</script>
 </body>
 </html>

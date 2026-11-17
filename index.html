@@ -320,6 +320,13 @@ body{padding-bottom:72px}
   .route-sc{order:-1}
   .route{padding:24px 20px}
 }
+
+/* v5 自己紹介（全ページ共通）の肩書き */
+.cred{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.cred div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.cred span{display:block;font-size:.78rem;color:var(--sub);line-height:1.5}
+.cred b{display:block;font-size:1rem;font-weight:900;color:var(--navy);line-height:1.5}
+@media (max-width:560px){.cred b{font-size:.9rem}.cred div{padding:10px 12px}}
 </style>
 </head>
 <body>
@@ -593,6 +600,12 @@ body{padding-bottom:72px}
       <p>産業医の資格を取ったとき、どう会社に関わり、何をすれば社員の役に立てるのか、分かりませんでした。そして多くの会社で、産業医は月に一度来て、相談がなければ帰っていきます。</p>
       <p>不調を抱えた社員ほど、自分からは相談に来ません。だからこそ、データで前触れをとらえ、医師のほうから声をかける。その結果を社長に毎月お伝えし、会社として手を打てるようにする。それがMedNaviの考える「会社のかかりつけ産業医」です。</p>
       <p class="sign">代表　磯部 輝紀<span>医師（産業医・総合診療科医・泌尿器科専門医）</span></p>
+      <div class="cred">
+        <div><span>産業医面談</span><b>500件以上</b></div>
+        <div><span>資格</span><b>健康経営アドバイザー</b></div>
+        <div><span>学位</span><b>経営大学院 修士（MBA）</b></div>
+        <div><span>担当企業</span><b>製造業からサービス業まで</b></div>
+      </div>
     </div>
   </div>
 </section>
@@ -643,7 +656,7 @@ body{padding-bottom:72px}
 
 </main>
 
-<div class="cta-bar" aria-label="お問い合わせ"><a href="#contact" class="main">無料で相談</a><a href="#price" class="sub">料金を見る</a></div>
+<div class="cta-bar" aria-label="お問い合わせ"><a href="#contact" class="main">無料で相談</a></div>
 <footer>
   <div class="container row">
     <img src="images/logo.png" alt="MedNavi">

@@ -281,7 +281,11 @@ body{padding-bottom:72px}
 @media (max-width:1023px){
   .hero{padding-top:0}
   .hero .hero-grid{grid-template-columns:1fr;gap:28px}
-  .hero-img{order:-1;margin:0 -16px 8px;border-radius:0;box-shadow:none;aspect-ratio:16/9}
+  .hero-img{order:-1;margin:0 -16px 8px;border-radius:0;box-shadow:none;aspect-ratio:auto;height:min(40vh,380px)}
+  .hero-img img{object-position:60% 28%}
+}
+@media (max-width:560px){
+  .hero-img{height:auto;aspect-ratio:3/2}
 }
 @media (max-width:560px){
   .hero-img{aspect-ratio:3/2}
